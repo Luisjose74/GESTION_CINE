@@ -6,9 +6,7 @@ from datos import cargar_funciones, guardar_funciones, cargar_peliculas
 
 console = Console()
 
-# ─────────────────────────────────────────────
 # Función para generar un ID único para funciones
-# ─────────────────────────────────────────────
 def generar_id_funcion(funciones):
     if not funciones:
         return "FUN-001"
@@ -17,9 +15,9 @@ def generar_id_funcion(funciones):
     return f"FUN-{numero:03d}"
 
 
-# ─────────────────────────────────────────────
+
 # Función para CREAR una nueva función (horario)
-# ─────────────────────────────────────────────
+
 def crear_funcion():
     console.print(Panel("[bold cyan]➕  AGREGAR NUEVA FUNCIÓN[/bold cyan]", box=box.DOUBLE))
 
@@ -80,9 +78,9 @@ def crear_funcion():
     console.print(f"\n[bold green]✔ Función creada con ID: {nueva_funcion['id_funcion']} — {sala} — {horario}[/bold green]")
 
 
-# ─────────────────────────────────────────────
+
 # Función para LISTAR todas las funciones
-# ─────────────────────────────────────────────
+
 def listar_funciones():
     funciones = cargar_funciones()
     peliculas = {p["id_pelicula"]: p for p in cargar_peliculas()}
@@ -111,9 +109,9 @@ def listar_funciones():
     console.print(tabla)
 
 
-# ─────────────────────────────────────────────
+
 # Función para ACTUALIZAR una función
-# ─────────────────────────────────────────────
+
 def actualizar_funcion():
     console.print(Panel("[bold cyan]✏️  ACTUALIZAR FUNCIÓN[/bold cyan]", box=box.DOUBLE))
     listar_funciones()
@@ -151,9 +149,9 @@ def actualizar_funcion():
     console.print(f"\n[bold green]✔ Función '{id_buscar}' actualizada correctamente.[/bold green]")
 
 
-# ─────────────────────────────────────────────
+
 # Función para ELIMINAR una función
-# ─────────────────────────────────────────────
+
 def eliminar_funcion():
     console.print(Panel("[bold red]🗑️  ELIMINAR FUNCIÓN[/bold red]", box=box.DOUBLE))
     listar_funciones()
@@ -181,9 +179,9 @@ def eliminar_funcion():
     console.print(f"\n[bold green]✔ Función '{id_buscar}' eliminada.[/bold green]")
 
 
-# ─────────────────────────────────────────────
+
 # Menú principal de funciones
-# ─────────────────────────────────────────────
+
 def menu_funciones():
     while True:
         console.print(Panel(
