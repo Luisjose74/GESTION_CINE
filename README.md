@@ -25,12 +25,12 @@
 
 **Desarrolladores:**
 
-| Rol  Nombre   |
-|---------------|
-| 👨‍💻 Developer 1 — **LUIS JOSE SILVA FAJARDO** 
-| 👩‍💻 Developer 2 — **GISELLE VANESSA VELASQUEZ ALBARRACIN** 
-| 👩‍💻 Developer 3 — **LAURA DANIELA SICUARIZA GOMEZ** 
-| 👨‍💻 Developer 4 — **JHON ALEXANDER BARRERO**
+| Rol             | Nombre                                             
+|-----------------|----------------------------------------|
+| 👨‍💻 Developer 1 |— **LUIS JOSE SILVA FAJARDO** |
+| 👩‍💻 Developer 2 |— **GISELLE VANESSA VELASQUEZ ALBARRACIN**| 
+| 👩‍💻 Developer 3 |— **LAURA DANIELA SICUARIZA GOMEZ** |
+| 👨‍💻 Developer 4 |— **JHON ALEXANDER BARRERO**|
 
 **Ficha:** _(3321349)_
 **Programa de Formación:** Análisis y Desarrollo de Software
