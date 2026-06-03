@@ -45,15 +45,6 @@ def _titulo_pelicula(id_pelicula: int) -> str:
             return p["titulo"]
     return "Desconocida"
 
-
-def _generar_asientos_sala() -> list:
-    filas = ["A", "B", "C", "D", "E"]
-    # Mediante una comprensión de listas, recorre cada fila ("A"-"E") 
-    # y para cada una genera columnas del 1 al 6, uniéndolas en texto (f"{fila}{col}").
-    return [f"{fila}{col}" for fila in filas for col in range(1, 7)]
-
-
-
 def mostrar_tabla_funciones(funciones: list) -> None:
     #Imprime un mensaje de advertencia
     if not funciones:
