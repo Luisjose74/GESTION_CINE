@@ -9,16 +9,15 @@
 
 0️⃣ Integrantes  
 1️⃣ Descripción general  
-2️⃣ Objetivos y alcance  
+2️⃣ Objetivos  
 3️⃣ Entidades y formatos de datos  
 4️⃣ Funcionalidades principales  
 5️⃣ Estructura del proyecto  
 6️⃣ Requisitos e instalación  
 7️⃣ Uso — flujo de operación y ejemplos  
 8️⃣ Validaciones y reglas de negocio  
-9️⃣ Calidad, pruebas y linters  
-🔟 Buenas prácticas de Git  
-1️⃣1️⃣ Ejemplos de archivos de datos  
+9️⃣ Buenas prácticas de Git  
+🔟 Ejemplos de archivos de datos  
 
 ---
 
@@ -57,7 +56,7 @@ Este proyecto es un **Sistema de Reservas para un Cine** de consola que permite:
 
 ---
 
-## 🎯 2. Objetivos y alcance
+## 🎯 2. Objetivos 
 
 ### 🎯 Objetivo general
 
@@ -185,6 +184,7 @@ id_funcion,id_pelicula,sala,horario,asientos_disponibles
 ```
 
 ---
+## 4. Funcionalidades principales
 
 ### 📊 Reportes — generados en consola
 
@@ -387,7 +387,7 @@ id_pelicula,titulo,genero,duracion_min
 4,El Exorcista,Terror,122
 ```
 
-### 🕐 funciones.csv
+### 🕐 funciones
 ```
 id_funcion,id_pelicula,sala,horario,asientos_disponibles
 1,1,Sala 1,14:00,80
