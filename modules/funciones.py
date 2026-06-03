@@ -285,3 +285,4 @@ def menu_funciones() -> None:
             break
         else:
             console.print("[red]✗ Opción inválida.[/red]")
+            
