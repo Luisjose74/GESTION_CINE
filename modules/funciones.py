@@ -45,15 +45,6 @@ def _titulo_pelicula(id_pelicula: int) -> str:
             return p["titulo"]
     return "Desconocida"
 
-
-def _generar_asientos_sala() -> list:
-    filas = ["A", "B", "C", "D", "E"]
-    # Mediante una comprensión de listas, recorre cada fila ("A"-"E") 
-    # y para cada una genera columnas del 1 al 6, uniéndolas en texto (f"{fila}{col}").
-    return [f"{fila}{col}" for fila in filas for col in range(1, 7)]
-
-
-
 def mostrar_tabla_funciones(funciones: list) -> None:
     #Imprime un mensaje de advertencia
     if not funciones:
@@ -63,12 +54,12 @@ def mostrar_tabla_funciones(funciones: list) -> None:
 
     #Se define el nombre, color y alineación de cada columna
     tabla = Table(title="🎟  Funciones Programadas", border_style="magenta", header_style="bold cyan")
-    tabla.add_column("ID",         style="bold cyan",   justify="center")
-    tabla.add_column("Película",   style="bold white")
-    tabla.add_column("Sala",       style="yellow",      justify="center")
-    tabla.add_column("Horario",    style="green",       justify="center")
-    tabla.add_column("Disponibles",style="bold green",  justify="center")
-    tabla.add_column("Capacidad",  style="white",       justify="center")
+    tabla.add_column("ID", style="bold cyan", justify="center")
+    tabla.add_column("Película", style="bold white")
+    tabla.add_column("Sala", style="yellow", justify="center")
+    tabla.add_column("Horario", style="green", justify="center")
+    tabla.add_column("Disponibles", style="bold green", justify="center")
+    tabla.add_column("Capacidad", style="white", justify="center")
 
 
     #Recorre la lista de funciones
@@ -197,7 +188,7 @@ def actualizar_funcion() -> None:
     
     #CAMBIO DE DATOS:
     console.print("  (Deja en blanco para no cambiar el campo)")
-    nueva_sala    = Prompt.ask("  Nueva sala",    default=funcion["sala"]).strip()
+    nueva_sala    = Prompt.ask("  Nueva sala", default=funcion["sala"]).strip()
     nuevo_horario = Prompt.ask("  Nuevo horario", default=funcion["horario"]).strip()
 
     #Sobreescribe los datos viejos del diccionario con los nuevos
@@ -285,4 +276,5 @@ def menu_funciones() -> None:
             break
         else:
             console.print("[red]✗ Opción inválida.[/red]")
+
             

@@ -43,6 +43,11 @@ def _funcion_info(id_funcion: int):#  Obtiene la información completa de una fu
         if f["id_funcion"] == id_funcion:
             return f
     return None
+def _generar_asientos_sala() -> list:
+    filas = ["A", "B", "C", "D", "E"]
+    # Mediante una comprensión de listas, recorre cada fila ("A"-"E") 
+    # y para cada una genera columnas del 1 al 6, uniéndolas en texto (f"{fila}{col}").
+    return [f"{fila}{col}" for fila in filas for col in range(1, 7)]
 
 """Muestra un mapa visual de los asientos de la función, 
 indicando cuáles están libres y cuáles ocupados."""
