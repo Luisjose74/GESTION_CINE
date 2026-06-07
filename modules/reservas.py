@@ -8,18 +8,18 @@ datetime: para manejar fechas y horas.
 rich: para mejorar la presentación en la terminal (tablas, paneles, prompts).
 modules.datos: para cargar y guardar datos de reservas, funciones y películas.
 """
-import datetime
-from rich.console import Console
-from rich.table import Table
-from rich.prompt import Prompt, IntPrompt
-from rich.panel import Panel
-from modules.datos import (
+import datetime # sirve para manejar fechas y horas, como la fecha de reserva.
+from rich.console import Console # sirve 
+from rich.table import Table # # para mostrar tablas de datos
+from rich.prompt import Prompt, IntPrompt # sirve para solicitar datos al usuario
+from rich.panel import Panel # sirve para crear paneles
+from modules.datos import ( # sirve para cargar y guardar datos de reservas, funciones y películas.
     cargar_reservas, guardar_reservas,
     cargar_funciones, guardar_funciones,
     cargar_peliculas
 )
 # ── Configuración ───────────────────────────────────────────
-console = Console()#
+console = Console()#sirve para imprimir en la terminal con formato enriquecido (colores, tablas, paneles, etc.).
 
 
 # ── Utilidades ─────────────────────────────────────────────
@@ -27,7 +27,7 @@ console = Console()#
 información de funciones y mostrar mapas de asientos, etc."""
 def _generar_id(reservas: list) -> int:# Genera un nuevo ID de reserva incrementando el máximo existente.
     if not reservas:
-        return 1
+        return 1 
     return max(r["id_reserva"] for r in reservas) + 1
 
 
@@ -99,7 +99,7 @@ def crear_reserva() -> None:
         console.print("[red]✗ ID inválido.[/red]")
         return
 
-    # Recargar funciones para modificar en memoria
+
     funciones_todas = cargar_funciones()
     funcion = next((f for f in funciones_todas if f["id_funcion"] == id_funcion), None)
     if not funcion or funcion.get("asientos_disponibles", 0) <= 0:
